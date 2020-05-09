@@ -28,8 +28,8 @@ async function runDummyUser() {
     while(true){
       const direction = Math.floor(Math.random()* 5);
       await driver.actions().keyDown(actions[direction]).perform();
+      await driver.sleep(509); 
       await driver.actions().keyUp(actions[direction]).perform();
-      await driver.sleep(509);
     }
   }catch(error){
     console.log(error);
