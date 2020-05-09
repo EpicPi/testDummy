@@ -17,9 +17,9 @@ async function runDummyUser() {
         )
       .build();
     // open n+1 tabs
-    await await driver.get('https://195aed9f.ngrok.io');
+    await await driver.get('https://test.gatherly.io');
     for( let i = 0; i < 9; i++){
-      await driver.executeScript("window.open('https://195aed9f.ngrok.io')");
+      await driver.executeScript("window.open('https://test.gatherly.io')");
     }
     const handles = await driver.getAllWindowHandles();
     console.log(handles);
